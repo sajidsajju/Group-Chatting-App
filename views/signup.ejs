@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+            <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+    </head>
+
+<body>
+        <%if (message) { %>
+            <div id="popup" class="<%= message.class%>">
+                    <div><strong><%= message.message %></strong>
+                         <!-- <a id="close" class="close-popup">x</a> -->
+                        </div>
+                </div><br><br>
+        <% } %>
+       
+    <!-- <div class="header">
+        <h2>SIGN-UP</h2>
+    </div> -->
+     <div class="form-border">
+    <form action="/" method="POST" ><Br>
+        <label>Name</label><br>
+        <input type="text" name="name"  ><br><br>
+        <label>Email</label><br>
+        <input type="email" name="email" ><br><br>
+        <label>Password</label><br>
+        <input type="password" name="password" ><br><br>
+        <label>Confirm-Password</label><br>
+        <input type="password" name="confirm_password" ><br><br>
+        <button type="submit">submit</button><br><br><label>Already a user ? </label><a href="/login" >SIGN IN</a>
+    </form>
+    </div>
+    <p id="saj"></p>
+    <script>
+            $(document).ready(function(){
+            //     $(".close-popup").click(function(){
+            //         $("#popup").removeClass("active");
+            //     })
+                setTimeout(function(){
+                $("#popup").removeClass("active");
+            },2000)
+            });
+            </script>
+    <script src="index.js" ></script>
+</body>
+</html>
